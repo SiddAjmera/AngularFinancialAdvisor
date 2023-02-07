@@ -1,0 +1,15 @@
+.footer {
+  margin-top: 40px;
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  .credits {
+    font-size: small;
+    font-weight: 400;
+
+    a {
+      color: #ffffff;
+    }
+  }
+}

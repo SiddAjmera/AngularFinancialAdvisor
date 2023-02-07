@@ -1,0 +1,21 @@
+<mat-toolbar color="tertiary">
+  <span>Capital Balance Projection</span>
+</mat-toolbar>
+<div class="container">
+  <div class="row">
+    <app-capital-balance-projection-form
+      [userInputs]="userInputs$ | async"
+      (userInputsUpdate)="handleUserInputsUpdate($event)"
+    ></app-capital-balance-projection-form>
+  </div>
+  <div class="row">
+    <app-capital-balance-projection-chart
+      [chartData]="chartData$ | async"
+    ></app-capital-balance-projection-chart>
+  </div>
+  <div class="row">
+    <app-capital-balance-projection-table
+      [tableData]="tableData$ | async"
+    ></app-capital-balance-projection-table>
+  </div>
+</div>

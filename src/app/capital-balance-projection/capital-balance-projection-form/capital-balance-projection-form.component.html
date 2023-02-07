@@ -1,0 +1,130 @@
+<div class="row" [formGroup]="form">
+  <mat-form-field class="col-xs-12 col-sm-6" appearance="fill">
+    <mat-label>Initial Capital</mat-label>
+    <mat-icon matPrefix>attach_money</mat-icon>
+    <input
+      formControlName="initialCapital"
+      required
+      matInput
+      type="number"
+      placeholder="300000"
+    />
+  </mat-form-field>
+
+  <mat-form-field class="col-xs-12 col-sm-6" appearance="fill">
+    <mat-label>Salary</mat-label>
+    <mat-icon matPrefix>attach_money</mat-icon>
+    <input
+      formControlName="salary"
+      required
+      matInput
+      type="number"
+      placeholder="100000"
+    />
+  </mat-form-field>
+
+  <mat-form-field class="col-xs-12 col-sm-6 col-lg-3" appearance="fill">
+    <mat-label>Current Age</mat-label>
+    <input
+      formControlName="currentAge"
+      required
+      matInput
+      type="number"
+      placeholder="30"
+    />
+  </mat-form-field>
+
+  <mat-form-field class="col-xs-12 col-sm-6 col-lg-3" appearance="fill">
+    <mat-label>Contribution Rate</mat-label>
+    <input
+      formControlName="contributionRate"
+      required
+      matInput
+      type="number"
+      placeholder="9.5"
+    />
+    <mat-icon matSuffix>percent</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field class="col-xs-12 col-sm-6 col-lg-3" appearance="fill">
+    <mat-label>Inflation Rate</mat-label>
+    <input
+      formControlName="inflationRate"
+      required
+      matInput
+      type="number"
+      placeholder="3"
+    />
+    <mat-icon matSuffix>percent</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field class="col-xs-12 col-sm-6 col-lg-3" appearance="fill">
+    <mat-label>Earnings Rate</mat-label>
+    <input
+      formControlName="earningsRate"
+      required
+      matInput
+      type="number"
+      placeholder="7.5"
+    />
+    <mat-icon matSuffix>percent</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field class="col-xs-12 col-sm-6 col-lg-3" appearance="fill">
+    <mat-label>Fees</mat-label>
+    <input
+      formControlName="fees"
+      required
+      matInput
+      type="number"
+      placeholder="2"
+    />
+    <mat-icon matSuffix>percent</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field class="col-xs-12 col-sm-6 col-lg-3" appearance="fill">
+    <mat-label>Tax</mat-label>
+    <input
+      formControlName="tax"
+      required
+      matInput
+      type="number"
+      placeholder="15"
+    />
+    <mat-icon matSuffix>percent</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field class="col-xs-12 col-sm-6 col-lg-3" appearance="fill">
+    <mat-label>Withdrawal Rate</mat-label>
+    <input
+      formControlName="withdrawalRate"
+      required
+      matInput
+      type="number"
+      placeholder="10"
+    />
+    <mat-icon matSuffix>percent</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field class="col-xs-12 col-sm-6 col-lg-3" appearance="fill">
+    <mat-label>Withdrawals Start & Contri End at</mat-label>
+    <input
+      formControlName="ageWithdrawalsStartAndContributionsEnd"
+      required
+      matInput
+      type="number"
+      placeholder="66"
+    />
+    <mat-hint>The age at which Withdrawals start & Contributions end</mat-hint>
+  </mat-form-field>
+
+  <button
+    [disabled]="form.invalid"
+    (click)="getProjection()"
+    class="col-xs-12"
+    mat-raised-button
+    color="primary"
+  >
+    Get Projection
+  </button>
+</div>

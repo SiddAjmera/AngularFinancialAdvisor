@@ -1,0 +1,15 @@
+<mat-toolbar class="header" color="primary">
+  <button class="icon" mat-button routerLink="/">Financial Advisor</button>
+  <span class="spacer"></span>
+  <button
+    [matTooltip]="'Switch to ' + (isDarkMode ? 'Light Theme' : 'Dark Theme')"
+    [attr.aria-label]="
+      'Switch to ' + (isDarkMode ? 'Light Theme' : 'Dark Theme')
+    "
+    (click)="switchTheme()"
+    mat-icon-button
+    aria-label="Theme Switch"
+  >
+    <mat-icon>{{ isDarkMode ? 'light_mode' : 'dark_mode' }}</mat-icon>
+  </button>
+</mat-toolbar>
